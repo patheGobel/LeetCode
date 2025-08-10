@@ -21,13 +21,14 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
     lc = by2 - ay1;
 
     if ( La * la == 0 ){ return Lb*lb; }
-    
+
     else if ( Lb * lb == 0 ){ return La * la; }
  
     else if (La * la == 0 && Lb * lb == 0 ){ return 0; }
 
     else if ( (bx1 > ax2) || (by1 > ay2) || (ax1 > bx2) || (ay1 > by2) ){ return (La * la) + (Lb * lb); }
     else if ( (ax1 < bx1 && ax2 > bx2) && (ay1 < by1 && ay2 > by2) ) { return (La * la); }
+    else if( ax1 == bx2 && ay2 == by1) { return (La * la) + (Lb * lb); }
 
     else { return (La * la) + (Lb*lb) - (Lc*lc); }
 }
