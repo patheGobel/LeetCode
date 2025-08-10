@@ -21,7 +21,7 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
     lc = by2 - ay1;
 
     if ( La * la == 0 ){ return Lb*lb; }
-
+    
     else if ( Lb * lb == 0 ){ return La * la; }
  
     else if (La * la == 0 && Lb * lb == 0 ){ return 0; }
