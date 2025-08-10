@@ -7,7 +7,7 @@ int main() {
     int bx1,  by1,  bx2,  by2;
     printf("Donner les coordonnées:\n");
     scanf("%d %d %d %d",&bx1,  &by1,  &bx2,  &by2);
-    printf("Aire Totale = %d", computeArea(1, 1, 5, 3, bx1, by1, bx2, by2) );
+    printf("Aire Totale = %d\n", computeArea(-2, -2, 2, 2, bx1, by1, bx2, by2) );
     return 0;
 }
 
@@ -27,6 +27,7 @@ int computeArea(int ax1, int ay1, int ax2, int ay2, int bx1, int by1, int bx2, i
     else if (La * la == 0 && Lb * lb == 0 ){ return 0; }
 
     else if ( (bx1 > ax2) || (by1 > ay2) || (ax1 > bx2) || (ay1 > by2) ){ return (La * la) + (Lb * lb); }
+    else if ( (ax1 < bx1 && ax2 > bx2) && (ay1 < by1 && ay2 > by2) ) { return (La * la); }
 
     else { return (La * la) + (Lb*lb) - (Lc*lc); }
 }
